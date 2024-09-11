@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+
+    <!-- bootsrtap cdn and JS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/script.js"></script>
+
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background-image: url("./assets/images/userbg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 92vh;
+            overflow-x: hidden;
+        }
+
+                @media(max-width: 997px){
+                    body{
+                        height: 130vh;
+                    }
+                }
+        .heading{
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.512);
+            margin-top: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .display-bal{
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 class="text-light">Welcome <span id="uName"></span></h1>
+            <h3 class="text-light">Online Banking Service</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="display-bal" id="balance"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-5 mx-5 mt-5">
+                <h1 class="text-light text-center">Deposit</h1>
+                <form class="border p-2 myForm">
+                    <input type="text" placeholder="Enter your Amount" style="width: 100%" id="amountDeposit"> <br> <br>
+
+                    <input type="text" placeholder="Enter your Account Number" style="width: 100%" id="acNumber"> <br> <br>
+
+                    <input type="password" placeholder="Enter your Password" style="width:100%" id="passwordD">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mt-4" onclick="deposit()">Deposit</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-md-5 mx-5 mt-5">
+                <h1 class="text-light text-center">Withdraw</h1>
+                <form class="border p-2 myform2">
+                    <input type="text" placeholder="Enter your Amount" style="width: 100%" id="amountWithdraw"> <br> <br>
+
+                    <input type="text" placeholder="Enter your Account Number" style="width: 100%" id="acNumber2"> <br> <br>
+
+                    <input type="password" placeholder="Enter your Password" style="width:100%" id="passwordW">
+
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mt-4" onclick="withdraw()">Withdraw</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
